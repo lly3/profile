@@ -1,0 +1,151 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *::after, *::before {
+	margin: 0;
+	box-sizing: inherit;
+	overflow-wrap: break-word;
+	font-family: 'Kanit', sans-serif;
+}
+
+:root {
+	--background-primary: #0D1117;
+	--background-secondary: #161B22;
+	--text-primary: #fff;
+	--text-secondary: #8B9299;
+}
+
+[data-theme="light"] {
+	--background-primary: #fff;
+	--background-secondary: #eee;
+	--text-primary: #000;
+	--text-secondary: #666;
+}
+
+body {
+	background-color: var(--background-primary);
+	transition: ease-in-out .4s;
+}
+
+a {
+	text-decoration: none;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	margin: auto;
+	padding: 10px;
+	width: 70%;
+}
+
+.nav .github {
+	display: flex;
+	align-items: center;
+	fill: var(--text-primary);
+}
+
+.nav .github p {
+	color: var(--text-primary);
+	margin-left: 5px;
+}
+
+.nav .change-mode {
+	margin-left: auto;
+	background-color: var(--background-secondary);
+	padding: 10px 12px;
+	border-radius: 15px;
+	fill: var(--text-primary);
+	cursor: pointer;
+	transition: ease-in-out .2s;
+}
+
+.nav .change-mode:hover {
+	transform: translateY(-7%);
+	transition: ease-in-out .2s;
+}
+
+.main-section {
+
+}
+
+.main-section .introduction {
+	margin: auto;
+	margin-top: 5%;
+	width: 70%;
+	text-align: center;
+}
+
+.main-section .introduction h1 {
+	color: var(--text-primary);
+}
+
+.main-section .introduction div {
+	display: inline-block;
+	padding: 30px 40px;
+	margin-top: 10px;
+	background-color: var(--background-secondary);
+	border-radius: 15px;
+	color: var(--text-secondary);
+}
+
+.main-section .infomation {
+	display: flex;
+	align-items: center;
+	width: 40%;
+	margin: auto;
+	margin-top: 5%;
+}
+
+.main-section .infomation > section {
+	display: block;
+	width: 60%;
+}
+
+.main-section .infomation > section h3 {
+	color: var(--text-primary);
+}
+
+.main-section .infomation > section div {
+	color: var(--text-secondary);
+}
+
+.main-section .infomation .avatar {
+	width: 35%;
+	margin-left: auto;
+	height: 100%;
+}
+
+.main-section .infomation .avatar img {
+	max-width: 240px;
+	min-width: 160px;
+	width: 100%;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+	.main-section .infomation {
+		width: 70%;
+	}
+}
+
+@media (max-width: 600px) {
+	.nav {
+		width: 100%;
+	}
+
+	.main-section .infomation {
+		flex-direction: column-reverse;
+	}
+
+	.main-section .infomation > section {
+		width: 100%;
+	}
+
+	.main-section .infomation .avatar {
+		width: auto;
+		margin-left: 0;
+	}
+}
